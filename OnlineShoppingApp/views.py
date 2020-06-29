@@ -12,7 +12,6 @@ def home(request):
     NewItemsdata = NewItems.objects.all()
     return render(request, 'OnlineShoppingApp/index.html', {"data": data, "TodaysDealsdata": TodaysDealsdata, "NewItemsdata":NewItemsdata})
 
-
 # def register(request):
 #     if request.method == "POST":
 #
