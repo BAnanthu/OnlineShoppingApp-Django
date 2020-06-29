@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mycart.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <script src="//use.fontawesome.com/releases/v5.12.1/js/all.js" data-auto-replace-svg="nest"></script>
+</head>
+<body>
+    {% if context %}
+    {% block content %}
+        {% include 'OnlineShoppingApp/productAdded.html' %}
+    {% endblock %}
+    {% endif %}
+    <div class="mycart-total">
+        <h2 class="mycart-subtotal">Subtotal(6): <span class="total-amount">$110,855.00</span></h2>
+        <p><i class="fas fa-check"></i> Your order qualifies for FREE Delivery </p>
+        <button class="mycart-buy-btn"><i class="fas fa-shopping-cart"></i>Proceed to Buy</button>
+    </div>
+
+    <div class="mycart-container">
+
+
+        {% for Data in mycart_items %}
+
+        <div class="mycrt-item-wrap">
+            <div class="mycart-product-img-wrap">
+                <img src="{{ Data.product.product_image.url }}" alt="">
+            </div>
+            <div class="mycart-product-details">
+                <h6  class="mycart-product-name">{{ Data.product.product_name }}</h6>
+                <h6 class="mycart-product-price">$ {{ Data.product.product_dealprice }}</h6>
+                <span class="mycart-product-stock">In Stock</span><br>
+                <span class="mycart-product-qty">Quantity:</span>
+                <select class="mycart-product-qty-selector">
+                    <option class="qty" value="">1</option>
+                    <option class="qty"  value="">2</option>
+                    <option class="qty"  value="">3</option>
+                    <option class="qty"  value="">4</option>
+                    <option class="qty"  value="">5</option>
+                    <option class="qty"  value="">6</option>
+                    <option class="qty"  value="">7</option>
+                    <option class="qty"  value="">8</option>
+                    <option class="qty"  value="">9</option>
+                    <option class="qty"  value="">10</option>
+                </select>
+                
+            </div>
+            <button onclick="location.href='./removeItem/{{ Data.id }}'" class="mycart-delete-btn"><i class="fas fa-trash-alt"></i> Delete</button>
+            <button class="mycart-buy-btn"><i class="fas fa-shopping-cart"></i> Buy Now</button>
+        </div>
+
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,282 @@
+$subhead:rgb(89, 89, 112);
+
+
+.full-produect-details-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .product-brand{
+        margin: 20px 50px;
+    }
+    .produect-details-img-container{
+        grid-column: 1/2;
+        width: 550px;
+        height: 550px;
+        margin-top: 70px;
+        margin-left: 110px;
+        
+        position: sticky;
+        top:0;
+            .produect-details-img{
+                width: 550px;
+                height: 550px;
+                &:hover{
+                    width: 570px;
+                    height: 570px;
+                    transition: .8s;
+                }
+            }
+            
+    }
+    .produect-name-rating-price-details{
+        grid-column: 2/3;
+        justify-content: center;
+        width: 800px;
+        height: 1110px;
+        // border-style: dashed;
+        .produect-name-details{
+            font-size: 33px;
+            margin: 50px;
+        }
+        .product-rating{
+            margin: 20px 50px;
+        }
+        .deal-price{
+            margin: 0px 50px;
+        }
+        .deal-stock{
+            color: rgb(136, 223, 5);
+            margin: 0px 50px;
+        }
+        .client-location{
+            margin: 0px 50px;
+            // margin-bottom: 70px;
+            i{
+                color: rgb(0, 132, 255);
+                &:hover{
+                    font-size: 30px;
+                    transition: .2s;
+                    margin-bottom: 0px;
+                }
+            }
+            &:hover{
+                  i{
+                    font-size: 30px;
+                    transition: .2s;
+                    margin-bottom: 0px;
+                  }  
+            }
+            
+        }
+        .product-Highlights{
+            margin: 0px 50px;
+            .product-Highlights-heading{
+                color: $subhead;
+                margin: 10px;
+            }
+            .product-Highlights-list{
+                margin: 20px;
+            }
+        }   
+        .product-specification{
+            margin: 0px 50px;
+            .product-specification-heading{
+                color: $subhead;
+                margin: 10px;
+                border-bottom: solid 1px rgb(56, 56, 56);  
+            }
+            .product-specification-list{
+                margin: 20px;
+            }
+            
+        }
+        
+    }
+    
+}
+.buy-addcart{
+    display: grid;
+    justify-content: center;
+    padding-top: 60px;
+    button{
+        width: 400px;
+        height: 45px;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+        border: none;
+        background-color: rgb(243, 0, 0);
+        background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA 51%, #1FA2FF 100%);
+        border-radius: 10px;
+        text-align: center; 
+        font-size: 20px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin-bottom: 30px;
+        i{
+            margin-right: 20px;
+        }
+        &:focus{
+            outline: none;
+        }
+        &:hover{
+            background-image: linear-gradient(to right,  #12D8FA  0%, #1FA2FF 51%, #12D8FA  100%);   
+        }
+    }
+}
+.product-rating{
+    cursor: pointer;
+}
+.checked {
+    color: orange;
+  }
+
+.similar-products{
+    width: 100%;
+    margin-top: 10px;
+}
+// *********************** rating and reviews  *********************
+
+.rating-graph-container{
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 50px;
+}  
+
+
+  .fa {
+    font-size: 25px;
+  }
+  
+  .checked {
+    color: orange;
+  }
+  
+  /* Three column layout */
+  .side {
+    float: left;
+    width: 15%;
+    margin-top:10px;
+  }
+  
+  .middle {
+    margin-top:10px;
+    float: left;
+    width: 70%;
+  }
+  
+  /* Place text to the right */
+  .right {
+    text-align: right;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* The bar container */
+  .bar-container {
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Individual bars */
+  .bar-5 {width: 60%; height: 18px; background-color: #4CAF50;}
+  .bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+  .bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+  .bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+  .bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+  
+  /* Responsive layout - make the columns stack on top of each other instead of next to each other */
+  @media (max-width: 400px) {
+    .side, .middle {
+      width: 100%;
+    }
+    .right {
+      display: none;
+    }
+  }
+
+
+// *********************** rating and reviews  *********************
+.rating-and-reviews-container{
+    width: 98%;
+    padding: 40px 0px 0px 0px;
+    margin: 20px 20px 0px 20px;
+    border: solid 1px;
+    border-color: rgb(228, 228, 228);
+    .Ratings-Reviews-heading{
+        margin: 0px 40px;
+    }
+    .rating-and-reviews{
+        height: 230px;
+        padding:  30px 30px 30px 50px;
+        border: solid 1px;
+        border-left: none;
+        border-right: none;
+        border-color: rgb(228, 228, 228);
+        img{
+            display: inline;
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+        }
+        p{
+           color: rgb(133, 133, 133);
+        }
+        .line-icon{
+            float: right;
+            margin-top: 80px;
+            margin-right: 20px;  
+            cursor: pointer;
+        }
+        .like:hover{
+            color: yellowgreen;
+        }
+        .dislike:hover{
+            color: rgb(255, 30, 0);
+        }
+    }
+}
+
+.rate-product-btn{
+    font-size: 17px;
+    float: right;
+    padding: 10px;
+    background-color: white;
+    border: solid 1px;
+    color: rgb(140, 204, 13);
+}
+
+.rating-graph{
+    height: 100px;
+}
+
+.user-star-rating{
+    width: 36px;
+    font-size: 16px;
+    font-weight: bold;
+    height: 27px;
+    background-color: green;
+    border-radius: 6px;
+    color: cornsilk;
+    text-align: center;
+    i{
+        font-size: 10px;
+        
+    }
+}
+.user-review{
+    display: flex;
+    color: black ;
+    font-weight: bold;
+    h6{
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+// *********************** rating and reviews  ****************(end)*****

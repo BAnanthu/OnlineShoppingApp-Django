@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/productAdded.css' %}">
+    <script src='//kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body>
+{% block content %}
+    <div class="product-added-container">
+        <div class="product-added-wrap">
+            <div class="anim-wrap">
+                <svg class="checkmark" viewBox="0 0 52 52">
+                    <circle class="checkmark-circle" fill="none" cx="26" cy="26" r="25" />
+                    <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+            </div>
+            <h3 class="product-added-text">item is added</h3>
+<!--            <button class="product-added-viewcart"><i class="fas fa-shopping-cart"></i> View Cart</button>-->
+        </div>
+    </div>
+{% endblock %}
+</body>
+</html>

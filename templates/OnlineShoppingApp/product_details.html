@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'css/product_details.css' %}">
+  <link rel="stylesheet" href="{% static 'css/single-row-slider.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <script src='//kit.fontawesome.com/a076d05399.js'></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="full-produect-details-container">
+
+    <div class="produect-details-img-container">
+      <img class="produect-details-img" src="{{ product.product_image.url }}" alt="">
+    </div>
+    <div class="produect-name-rating-price-details">
+      <h3 class="produect-name-details">{{ product.product_name }} <span>{{ product.product_shortinfo }}</span></h3>
+      <p class="product-brand"><span style="color: rgb(140, 160, 226);">by</span><span> {{ product.product_brand }}</span></p>
+
+      <div class="product-rating">
+        <span id=1 onclick="star1('1')" class="fa fa-star"></span>
+        <span id=2 onclick="star1('2')" class="fa fa-star"></span>
+        <span id=3 onclick="star1('3')" class="fa fa-star"></span>
+        <span id=4 onclick="star1('4')" class="fa fa-star"></span>
+        <span id=5 onclick="star1('5')" class="fa fa-star"></span>
+        <span style="margin-left: 10px;"> 300 ratings</span>
+      </div>
+      <div class="deal-price">
+        <h4>Deal Price : <span> {{ product.product_dealprice }} $</span> </h4>
+      </div>
+      <div class="deal-stock">
+        <h5><span>In Stock</span></h5>
+      </div>
+      <div class="client-location">
+        <h5><i class="fas fa-map-marker-alt"></i> location</h5>
+        <h6><span>{{ user.customer.customer_address }}</span></h6>
+      </div>
+      <div class="buy-addcart">
+        <button onclick="location.href='./addingtocart/{{ product.product_id }}'"><i class="fas fa-cart-plus"></i> Add to Cart </button>
+        <button><i class="fas fa-cart-arrow-down"></i> Buy Now </button>
+      </div>
+      <div class="product-Highlights">
+        <h4 class="product-Highlights-heading">Highlights</h4>
+        <ul class="product-Highlights-list">
+          <li>GPS and Altimeter</li>
+          <li>Swimproof</li>
+          <li>Voice based Siri</li>
+          <li>Smart Coaching</li>
+          <li>Heart Rate Monitor</li>
+          <li>Breathe App</li>
+          <li>Touchscreen</li>
+        </ul>
+      </div>
+      <div class="product-specification">
+        <h4 class="product-specification-heading">Specification</h4>
+        <ul class="product-specification-list">
+          <li>GPS and Altimeter</li>
+          <li>Swimproof</li>
+          <li>Voice based Siri</li>
+          <li>Smart Coaching</li>
+          <li>Heart Rate Monitor</li>
+          <li>Breathe App</li>
+          <li>Touchscreen</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--*********************** slider product row ********************* -->
+  <div class="similar-products">
+    <!--*********************** slider product row ********************* -->
+    <div class="outer-slide-product-container">
+      <div class="slide-product-container-heading">
+        <h4>Similar Products</h4>
+      </div>
+      <div class="slide-product-container">
+        <div class="slider-product">
+          <img class="slider-product-image" src="{% static 'images/apple.jpg' %}" alt="">
+          <div class="slider-product-name-price">
+            <a class="slider-product-price">$70-$100</a><br>
+            <a class="slider-product-name">apple</a>
+          </div>
+        </div>
+        <div class="slider-product">
+          <img class="slider-product-image" src="{% static 'images/apple.jpg' %}" alt="">
+          <div class="slider-product-name-price">
+            <a class="slider-product-price">$70-$100</a><br>
+            <a class="slider-product-name">apple</a>
+          </div>
+        </div>
+        <div class="slider-product">
+          <img class="slider-product-image" src="{% static 'images/apple.jpg' %}" alt="">
+          <div class="slider-product-name-price">
+            <a class="slider-product-price">$70-$100</a><br>
+            <a class="slider-product-name">apple</a>
+          </div>
+        </div>
+        <div class="slider-product">
+          <img class="slider-product-image" src="{% static 'images/apple.jpg' %}" alt="">
+          <div class="slider-product-name-price">
+            <a class="slider-product-price">$70-$100</a><br>
+            <a class="slider-product-name">apple</a>
+          </div>
+        </div>
+        <div class="slider-product">
+          <img class="slider-product-image" src="{% static 'images/apple.jpg' %}" alt="">
+          <div class="slider-product-name-price">
+            <a class="slider-product-price">$70-$100</a><br>
+            <a class="slider-product-name">apple</a>
+          </div>
+        </div>
+        <div class="slider-product">
+          <img class="slider-product-image" src="{% static 'images/apple.jpg' %}" alt="">
+          <div class="slider-product-name-price">
+            <a class="slider-product-price">$70-$100</a><br>
+            <a class="slider-product-name">apple</a>
+          </div>
+        </div>
+        <div class="slider-product">
+          <img class="slider-product-image" src="{% static 'images/apple.jpg' %}" alt="">
+          <div class="slider-product-name-price">
+            <a class="slider-product-price">$70-$100</a><br>
+            <a class="slider-product-name">apple</a>
+          </div>
+        </div>
+        <div class="slider-product">
+          <img class="slider-product-image" src="{% static 'images/apple.jpg' %}" alt="">
+          <div class="slider-product-name-price">
+            <a class="slider-product-price">$70-$100</a><br>
+            <a class="slider-product-name">apple</a>
+          </div>
+        </div>
+        <div class="slider-product">
+          <img class="slider-product-image" src="{% static 'images/apple.jpg' %}" alt="">
+          <div class="slider-product-name-price">
+            <a class="slider-product-price">$70-$100</a><br>
+            <a class="slider-product-name">apple</a>
+          </div>
+        </div>
+        <div class="slider-product">
+          <img class="slider-product-image" src="{% static 'images/apple.jpg' %}" alt="">
+          <div class="slider-product-name-price">
+            <a class="slider-product-price">$70-$100</a><br>
+            <a class="slider-product-name">apple</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--*********************** slider product row  ****************(end)***** -->
+
+  </div>
+  <!--*********************** slider product row  ****************(end)***** -->
+
+
+  <div class="rating-and-reviews-container">
+    <h2 class="Ratings-Reviews-heading">Ratings & Reviews <button class="rate-product-btn">Rate Product</button></h2>
+    <div class="rating-graph-container">
+      <!-- // *********************** rating and reviews  ********************* -->
+      <span class="heading">User Rating</span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <p>4.1 average based on 254 reviews.</p>
+      <hr style="border:3px solid #f1f1f1">
+
+      <div class="row">
+        <div class="side">
+          <div>5 star</div>
+        </div>
+        <div class="middle">
+          <div class="bar-container">
+            <div class="bar-5"></div>
+          </div>
+        </div>
+        <div class="side right">
+          <div>150</div>
+        </div>
+
+
+        <div class="side">
+          <div>4 star</div>
+        </div>
+        <div class="middle">
+          <div class="bar-container">
+            <div class="bar-4"></div>
+          </div>
+        </div>
+        <div class="side right">
+          <div>63</div>
+        </div>
+
+
+        <div class="side">
+          <div>3 star</div>
+        </div>
+        <div class="middle">
+          <div class="bar-container">
+            <div class="bar-3"></div>
+          </div>
+        </div>
+        <div class="side right">
+          <div>15</div>
+        </div>
+
+
+        <div class="side">
+          <div>2 star</div>
+        </div>
+        <div class="middle">
+          <div class="bar-container">
+            <div class="bar-2"></div>
+          </div>
+        </div>
+        <div class="side right">
+          <div>6</div>
+        </div>
+        <div class="side">
+
+          
+          <div>1 star</div>
+        </div>
+        <div class="middle">
+          <div class="bar-container">
+            <div class="bar-1"></div>
+          </div>
+        </div>
+        <div class="side right">
+          <div>20</div>
+        </div>
+      </div>
+      <!-- // *********************** rating and reviews  ********************* -->
+    </div>
+
+    <div class="rating-graph"></div>
+    <div class="rating-and-reviews">
+      <div class="user-review">
+        <div class="user-star-rating">
+          <span>5 <i class="fas fa-star"></i></span>
+        </div>
+        <h6>good product</h6>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto porro error, fugit minus quae nulla veritatis
+        rem facere exercitationem!</p>
+      <img src="{% static 'images/apple.jpg' %}">
+      <img src="{% static 'images/apple.jpg' %}">
+      <img src="{% static 'images/apple.jpg' %}">
+      <span class="line-icon dislike"><i class="fas fa-thumbs-down"></i> 30</span>
+      <span class="line-icon like"><i class="fas fa-thumbs-up"></i> 700</span>
+    </div>
+
+    <div class="rating-and-reviews">
+      <div class="user-review">
+        <div class="user-star-rating">
+          <span>3 <i class="fas fa-star"></i></span>
+        </div>
+        <h6>nice product</h6>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto porro error, fugit minus quae nulla veritatis
+        rem facere exercitationem!</p>
+      <img src="{% static 'images/apple.jpg' %}">
+      <img src="{% static 'images/apple.jpg' %}">
+      <img src="{% static 'images/apple.jpg' %}">
+      <span class="line-icon dislike"><i class="fas fa-thumbs-down"></i> 100</span>
+      <span class="line-icon like"><i class="fas fa-thumbs-up"></i> 10</span>
+    </div>
+  </div>
+
+  <!--*********************** rating and reviews  ****************(end)***** -->
+
+  <script>
+    function star1(myid) {
+      myid = parseInt(myid)
+      var i;
+      for (j = 1; j < 6; j++) {
+        document.getElementById(j).className = "fa fa-star";
+      }
+      for (i = 1; i <= myid; i++) {
+        var val = document.getElementById(i).getAttribute("class");
+        if (val == "fa fa-star") {
+          document.getElementById(i).className = "fa fa-star checked";
+        }
+      }
+      rating = i - 1;
+    }
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+body{
+    margin: 0px;
+}
+.result-sort{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    height: 100px;
+    margin-bottom: 5px;
+    box-shadow: 0px 2px 5px 0px rgb(163, 163, 163);
+    .results{
+        font-size: large;
+        font-family: roboto;
+    }
+    .btn{
+        width: 130px;
+    }
+    
+}
+
+.result-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    border-bottom: solid rgb(207, 207, 207) 1px;
+    margin: 0px 40px;
+    .result-product-image-container{
+        grid-column: 1/2;
+        width: 330px;
+        height: 330px;
+        margin: 40px;
+    }
+    .result-product-image{
+        width: 330px;
+        height: 330px;
+    }
+    .result-product-details{
+        justify-self: start;
+        .product-amount{
+            color: rgb(160, 38, 38);
+            font-weight: bold;
+        }
+    }
+}
+
+.price-input{
+    width: 80px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 5px;
+    border: solid 1px rgb(209, 209, 209);
+}
+.checked{
+    color: orange;
+}
+
+.heart{
+    width:100px;
+    height:100px;
+    position: absolute;
+    margin-left: 450px;
+    margin-top: -23px;
+    transform: translate(-50%,-50%);
+    background: url(images/heart.png) no-repeat;
+    background-position: 0 0;
+    animation: fav-heart 1s steps(28);
+}
+
+.heartpop{
+    background-position: -2800px 0;
+    transition: background 1s steps(28);
+}
+
+@keyframes fave-heart{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: -1800px 0;
+    }
+}

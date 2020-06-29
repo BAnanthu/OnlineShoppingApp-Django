@@ -1,0 +1,116 @@
+{% load static %}
+body {
+  margin: 0px;
+}
+
+.result-sort {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+  margin-bottom: 5px;
+  -webkit-box-shadow: 0px 2px 5px 0px #a3a3a3;
+          box-shadow: 0px 2px 5px 0px #a3a3a3;
+}
+
+.result-sort .results {
+  font-size: large;
+  font-family: roboto;
+}
+
+.result-sort .btn {
+  width: 130px;
+}
+
+.result-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: solid #cfcfcf 1px;
+  margin: 0px 40px;
+}
+
+.result-grid .result-product-image-container {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  width: 330px;
+  height: 330px;
+  margin: 40px;
+}
+
+.result-grid .result-product-image {
+  width: 330px;
+  height: 330px;
+}
+
+.result-grid .result-product-details {
+  -ms-grid-column-align: start;
+      justify-self: start;
+}
+
+.result-grid .result-product-details .product-amount {
+  color: #a02626;
+  font-weight: bold;
+}
+
+.price-input {
+  width: 80px;
+  height: 30px;
+  margin: 10px;
+  border-radius: 5px;
+  border: solid 1px #d1d1d1;
+}
+
+.checked {
+  color: orange;
+}
+
+.heart {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  margin-left: 450px;
+  margin-top: -23px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: url("/static/images/heart.png") no-repeat;
+  background-position: 0 0;
+  -webkit-animation: fav-heart 1s steps(28);
+          animation: fav-heart 1s steps(28);
+}
+
+.heartpop {
+  background-position: -2800px 0;
+  -webkit-transition: background 1s steps(28);
+  transition: background 1s steps(28);
+}
+
+@-webkit-keyframes fave-heart {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -1800px 0;
+  }
+}
+
+@keyframes fave-heart {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -1800px 0;
+  }
+}
+/*# sourceMappingURL=search.css.map */

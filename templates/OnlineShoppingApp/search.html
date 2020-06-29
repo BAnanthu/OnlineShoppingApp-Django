@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/search2.css' %}">
+    <script src='//kit.fontawesome.com/a076d05399.js'></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+
+<body>
+    
+    <div class="result-sort">
+        <div class="results">results for <span style="color: rgb(255, 157, 0);"> "{{query}}"</span></div>
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">sort by 
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li class="dropdown-header">Price</li>
+                <li><a href="#">low - heigh</a></li>
+                <li><a href="#">high - low</a></li>
+                <li> <span style="margin-left: 20px;">min :</span><input class="price-input" type="text"></li>
+                <li> <span style="margin-left: 20px;">max :</span><input class="price-input" type="text"></li>
+                <li><button style="margin-left: 50px;border-radius: 9px;background-color: orange;border: none;" >Go</button></li>
+                <li class="divider"></li>
+                <!-- <li class="dropdown-header">Barnd</li>
+                <li><a href="#">About Us</a></li> -->
+            </ul>
+        </div>
+    </div>
+
+    {% for Data in products %}
+    <div class="result-grid">
+        <div class="result-product-image-container">
+            <img class="result-product-image" src="{{ Data.product_image.url }}" alt="">
+        </div>
+        <div class="result-product-details">
+            <h2>{{Data.product_name}}</h2><span class="heart"></span>
+            <div class="product-rating">
+                <span id=id1 onclick="star1('1')" class="fa fa-star checked"></span>
+                <span id=id2 onclick="star1('2')" class="fa fa-star"></span>
+                <span id=id3 onclick="star1('3')" class="fa fa-star"></span>
+                <span id=id4 onclick="star1('4')" class="fa fa-star"></span>
+                <span id=id5 onclick="star1('5')" class="fa fa-star"></span>
+                <span style="margin-left: 10px;"> {{Data.product_number_of_ratings}} ratings</span>
+              </div>
+              <h4 class="product-amount">$ {{Data.product_dealprice}}</h4><span style="text-decoration: line-through crimson;"> ${{Data.product_price}} </span><span style="color: rgb(0, 98, 255);"> save  ${{Data.product_discount}}</span>
+            <p>Get it with in three days</p>
+            <p>FREE Delivery</p>
+        </div>
+    </div>
+    {% endfor %}
+<!--    <div class="result-grid">-->
+<!--        <div class="result-product-image-container">-->
+<!--            <img class="result-product-image" src="images/apple-iphone-x.jpg" alt="">-->
+<!--        </div>-->
+<!--        <div class="result-product-details">-->
+<!--            <h2>Apple iPhone XR(64GB)-Blue</h2><span class="heart"></span>-->
+<!--            <div class="product-rating">-->
+<!--                <span id=i1 onclick="star1('1')" class="fa fa-star checked"></span>-->
+<!--                <span id=i2 onclick="star1('2')" class="fa fa-star checked"></span>-->
+<!--                <span id=i3 onclick="star1('3')" class="fa fa-star"></span>-->
+<!--                <span id=i4 onclick="star1('4')" class="fa fa-star"></span>-->
+<!--                <span id=i5 onclick="star1('5')" class="fa fa-star"></span>-->
+<!--                <span style="margin-left: 10px;"> 300 ratings</span>-->
+<!--              </div>-->
+<!--              <h4 class="product-amount">$ 48,900</h4><span style="text-decoration: line-through crimson;"> $49,900 </span><span style="color: rgb(0, 98, 255);"> save  $1,000</span>-->
+<!--            <p>Get it with in three days</p>-->
+<!--            <p>FREE Delivery</p>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="result-grid">-->
+<!--        <div class="result-product-image-container">-->
+<!--            <img class="result-product-image" src="images/oppo.jpg" alt="">-->
+<!--        </div>-->
+<!--        <div class="result-product-details">-->
+<!--            <h2>Apple iPhone XR(64GB)-Blue</h2><span class="heart"></span>-->
+<!--            <div class="product-rating">-->
+<!--                <span id=1 onclick="star1('1')" class="fa fa-star checked"></span>-->
+<!--                <span id=2 onclick="star1('2')" class="fa fa-star checked"></span>-->
+<!--                <span id=3 onclick="star1('3')" class="fa fa-star checked"></span>-->
+<!--                <span id=4 onclick="star1('4')" class="fa fa-star checked"></span>-->
+<!--                <span id=5 onclick="star1('5')" class="fa fa-star"></span>-->
+<!--                <span style="margin-left: 10px;"> 300 ratings</span>-->
+<!--              </div>-->
+<!--            <h4 class="product-amount">$ 48,900</h4><span style="text-decoration: line-through crimson;"> $49,900 </span><span style="color: rgb(0, 98, 255);"> save  $1,000</span>-->
+<!--            <p>Get it with in three days</p>-->
+<!--            <p style="color: rgb(90, 189, 24);">FREE Delivery</p>-->
+<!--        </div>-->
+<!--    </div>-->
+    <script>
+        $(document).ready(function(){
+            $(".heart").mousedown(function(){
+                $(this).toggleClass("heartpop")
+            })
+        })
+        
+    </script>
+</body>
+
+</html>
