@@ -39,7 +39,7 @@
     {% for Data in products %}
     <div class="result-grid">
         <div class="result-product-image-container">
-            <img class="result-product-image" src="{{ Data.product_image.url }}" alt="">
+            <a href="/Products/productdetails/{{ Data.product_id }}"><img class="result-product-image" src="{{ Data.product_image.url }}" alt=""></a>
         </div>
         <div class="result-product-details">
             <h2>{{Data.product_name}}</h2><span class="heart"></span>

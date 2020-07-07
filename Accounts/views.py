@@ -1,8 +1,8 @@
 from django.shortcuts import render,redirect,get_object_or_404
 from django.http import HttpResponse
-from OnlineShoppingApp.models import Product
+from Products.models import Product
 from .models import Customer
-from OnlineShoppingApp.models import TodaysDeals,NewItems
+from Products.models import TodaysDeals,NewItems
 from .forms import UserSignupForm
 from django.contrib.auth.models import User, auth
 from django.contrib import messages

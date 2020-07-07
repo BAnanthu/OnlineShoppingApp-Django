@@ -1,7 +1,8 @@
 from django.shortcuts import render,get_object_or_404
 from django.http import HttpResponse
-from .models import Product
-from .models import TodaysDeals,NewItems,AddToCart
+from Products.models import Product
+from Products.models import TodaysDeals,NewItems
+from .models import AddToCart
 # from .forms import UserSignupForm
 from django.contrib.auth.models import User, auth
 from django.contrib import messages

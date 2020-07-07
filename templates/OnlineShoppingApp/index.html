@@ -181,9 +181,9 @@
         <img class="card-img-top " src='{{ product.NewItems_product_fk.product_image.url }}' alt="Card image">
         <div class="card-body">
           <h4 class="card-title">{{ product.NewItems_product_fk.product_name }}</h4>
-          <p class="card-text">₹ {{ product.NewItems_product_fk.product_price }}<span>  {{ product.product_discount }}% off</span></p>
+          <p class="card-text">₹ {{ product.NewItems_product_fk.product_price }}<span>  {{ product.NewItems_product_fk.product_offeroff }}% off</span></p>
           <p class="card-text">₹ {{ product.NewItems_product_fk.product_dealprice }}</p>
-          <a href="./productdetails/{{ product.NewItems_product_fk.product_id }}" class="btn btn-primary">See more</a>
+          <a href="/Products/productdetails/{{ product.NewItems_product_fk.product_id }}" class="btn btn-primary">See more</a>
         </div>
       </div>
       {% endfor %}
@@ -206,7 +206,7 @@
         {% for TDData in TodaysDealsdata %}
         {% if forloop.counter <= 4 and forloop.counter > 0  %}
           <div class="card2">
-            <div class="card-img-container"><a href="./productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"><img src="{{ TDData.todaysDeal_product_fk.product_image.url }}"></a><a  class="card2-product-name">{{ TDData.todaysDeal_product_fk.product_name }}</a><br><a
+            <div class="card-img-container"><a href="/Products/productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"><img src="{{ TDData.todaysDeal_product_fk.product_image.url }}"></a><a  class="card2-product-name">{{ TDData.todaysDeal_product_fk.product_name }}</a><br><a
               class="card2-product-price">just ${{ TDData.todaysDeal_deal_price }}</a></div>
           </div>
         {% endif %}
@@ -217,7 +217,7 @@
         {% for TDData in TodaysDealsdata %}
         {% if forloop.counter  <= 8 and forloop.counter > 4  %}
           <div class="card2">
-          <div class="card-img-container"><a href="./productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"><img src="{{ TDData.todaysDeal_product_fk.product_image.url }}"></a><a class="card2-product-name">{{ TDData.todaysDeal_product_fk.product_name }}</a><br><a
+          <div class="card-img-container"><a href="/Products/productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"><img src="{{ TDData.todaysDeal_product_fk.product_image.url }}"></a><a class="card2-product-name">{{ TDData.todaysDeal_product_fk.product_name }}</a><br><a
               class="card2-product-price">just ${{ TDData.todaysDeal_deal_price }}</a></div>
           </div>
         {% endif %}
@@ -228,7 +228,7 @@
         {% for TDData in TodaysDealsdata %}
         {% if forloop.counter <= 12 and forloop.counter > 8  %}
           <div class="card2">
-          <div class="card-img-container"><a href="./productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"></a><img src="{{ TDData.todaysDeal_product_fk.product_image.url }}"></a><a class="card2-product-name">{{ TDData.todaysDeal_product_fk.product_name }}</a><br><a
+          <div class="card-img-container"><a href="/Products/productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"></a><img src="{{ TDData.todaysDeal_product_fk.product_image.url }}"></a><a class="card2-product-name">{{ TDData.todaysDeal_product_fk.product_name }}</a><br><a
               class="card2-product-price">just ${{ TDData.todaysDeal_deal_price }}</a></div>
           </div>
         {% endif %}
@@ -239,7 +239,7 @@
         {% for TDData in TodaysDealsdata %}
         {% if forloop.counter <= 16 and forloop.counter > 12  %}
           <div class="card2">
-          <div class="card-img-container"><a href="./productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"></a><img src="{{ TDData.todaysDeal_product_fk.product_image.url }}"></a><a class="card2-product-name">{{ TDData.todaysDeal_product_fk.product_name }}</a><br><a
+          <div class="card-img-container"><a href="/Products//productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"></a><img src="{{ TDData.todaysDeal_product_fk.product_image.url }}"></a><a class="card2-product-name">{{ TDData.todaysDeal_product_fk.product_name }}</a><br><a
               class="card2-product-price">just ${{ TDData.todaysDeal_deal_price }}</a></div>
           </div>
         {% endif %}
@@ -250,7 +250,7 @@
         {% for TDData in TodaysDealsdata %}
         {% if forloop.counter <= 20 and forloop.counter > 16  %}
           <div class="card2">
-          <div class="card-img-container"><a href="./productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"></a><img src="{{ TDData.todaysDeal_product_fk.product_image.url }}"></a><a class="card2-product-name">{{ TDData.todaysDeal_product_fk.product_name }}</a><br><a
+          <div class="card-img-container"><a href="/Products/productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"></a><img src="{{ TDData.todaysDeal_product_fk.product_image.url }}"></a><a class="card2-product-name">{{ TDData.todaysDeal_product_fk.product_name }}</a><br><a
               class="card2-product-price">just ${{ TDData.todaysDeal_deal_price }}</a></div>
           </div>
         {% endif %}
@@ -276,7 +276,7 @@
         {% for TDData in TodaysDealsdata %}
         {% if forloop.counter <= 4 and forloop.counter > 0  %}
           <div class="card2">
-            <div class="card-img-container"><a href="./productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"><img src="{{ TDData.todaysDeal_product_fk.product_image.url }}"></a><a  class="card2-product-name">{{ TDData.todaysDeal_product_fk.product_name }}</a><br><a
+            <div class="card-img-container"><a href="/Products/productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"><img src="{{ TDData.todaysDeal_product_fk.product_image.url }}"></a><a  class="card2-product-name">{{ TDData.todaysDeal_product_fk.product_name }}</a><br><a
               class="card2-product-price">just ${{ TDData.todaysDeal_deal_price }}</a></div>
           </div>
         {% endif %}
@@ -287,7 +287,7 @@
         {% for TDData in TodaysDealsdata %}
         {% if forloop.counter  <= 8 and forloop.counter > 4  %}
           <div class="card2">
-          <div class="card-img-container"><a href="./productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"><img src="{{ TDData.todaysDeal_product_fk.product_image.url }}"></a><a class="card2-product-name">{{ TDData.todaysDeal_product_fk.product_name }}</a><br><a
+          <div class="card-img-container"><a href="/Products/productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"><img src="{{ TDData.todaysDeal_product_fk.product_image.url }}"></a><a class="card2-product-name">{{ TDData.todaysDeal_product_fk.product_name }}</a><br><a
               class="card2-product-price">just ${{ TDData.todaysDeal_deal_price }}</a></div>
           </div>
         {% endif %}
@@ -298,7 +298,7 @@
         {% for TDData in TodaysDealsdata %}
         {% if forloop.counter <= 12 and forloop.counter > 8  %}
           <div class="card2">
-          <div class="card-img-container"><a href="./productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"></a><img src="{{ TDData.todaysDeal_product_fk.product_image.url }}"></a><a class="card2-product-name">{{ TDData.todaysDeal_product_fk.product_name }}</a><br><a
+          <div class="card-img-container"><a href="/Products/productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"></a><img src="{{ TDData.todaysDeal_product_fk.product_image.url }}"></a><a class="card2-product-name">{{ TDData.todaysDeal_product_fk.product_name }}</a><br><a
               class="card2-product-price">just ${{ TDData.todaysDeal_deal_price }}</a></div>
           </div>
         {% endif %}
@@ -309,7 +309,7 @@
         {% for TDData in TodaysDealsdata %}
         {% if forloop.counter <= 16 and forloop.counter > 12  %}
           <div class="card2">
-          <div class="card-img-container"><a href="./productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"></a><img src="{{ TDData.todaysDeal_product_fk.product_image.url }}"></a><a class="card2-product-name">{{ TDData.todaysDeal_product_fk.product_name }}</a><br><a
+          <div class="card-img-container"><a href="/Products/productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"></a><img src="{{ TDData.todaysDeal_product_fk.product_image.url }}"></a><a class="card2-product-name">{{ TDData.todaysDeal_product_fk.product_name }}</a><br><a
               class="card2-product-price">just ${{ TDData.todaysDeal_deal_price }}</a></div>
           </div>
         {% endif %}
@@ -320,7 +320,7 @@
         {% for TDData in TodaysDealsdata %}
         {% if forloop.counter <= 20 and forloop.counter > 16  %}
           <div class="card2">
-          <div class="card-img-container"><a href="./productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"></a><img src="{{ TDData.todaysDeal_product_fk.product_image.url }}"></a><a class="card2-product-name">{{ TDData.todaysDeal_product_fk.product_name }}</a><br><a
+          <div class="card-img-container"><a href="/Products/productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"></a><img src="{{ TDData.todaysDeal_product_fk.product_image.url }}"></a><a class="card2-product-name">{{ TDData.todaysDeal_product_fk.product_name }}</a><br><a
               class="card2-product-price">just ${{ TDData.todaysDeal_deal_price }}</a></div>
           </div>
         {% endif %}

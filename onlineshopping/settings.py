@@ -39,6 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'OnlineShoppingApp',
     'Accounts',
+    'Products',
+    'Search',
+    'Addtocart',
+    'Mycart',
     'django_filters',
 
 ]
