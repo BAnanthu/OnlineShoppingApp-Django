@@ -2,7 +2,7 @@ from django.shortcuts import render,get_object_or_404
 from django.http import HttpResponse
 from Products.models import Product
 from Products.models import TodaysDeals,NewItems
-from .models import AddToCart
+from Cart.models import AddToCart
 # from .forms import UserSignupForm
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
@@ -95,41 +95,41 @@ def home(request):
 #     auth.logout(request)
 #     return render(request,'OnlineShoppingApp/index.html')
 
-def productDetails(request,product_id):
-    product = Product.objects.get(product_id=product_id)
-    return render(request, 'OnlineShoppingApp/product_details.html', {'product': product})
+# def productDetails(request,product_id):
+#     product = Product.objects.get(product_id=product_id)
+#     return render(request, 'OnlineShoppingApp/product_details.html', {'product': product})
 
-def addToCart(request,product_id):
-    product = get_object_or_404(Product,product_id=product_id)
-    cart_added_product, created= AddToCart.objects.get_or_create(user=request.user,product=product)
-    mycart_items = AddToCart.objects.filter(user=request.user)
-    print(cart_added_product)
-    if not created:
-        if AddToCart.objects.filter(product_id=product.product_id,user=request.user).exists():
+# def addToCart(request,product_id):
+#     product = get_object_or_404(Product,product_id=product_id)
+#     cart_added_product, created= AddToCart.objects.get_or_create(user=request.user,product=product)
+#     mycart_items = AddToCart.objects.filter(user=request.user)
+#     print(cart_added_product)
+#     if not created:
+#         if AddToCart.objects.filter(product_id=product.product_id,user=request.user).exists():
+#
+#             order_qs=AddToCart.objects.filter(product_id=product.product_id,user=request.user)
+#             order = order_qs[0]
+#             order.quantity += 1
+#             order.save()
+#     context = "true"
+#     return render(request, 'OnlineShoppingApp/mycart.html', {'mycart_items': mycart_items,'context':context})
+#
+# def removeItem(request,cart_id):
+#     product = get_object_or_404(AddToCart, id=cart_id).delete()
+#     mycart_items = AddToCart.objects.filter(user=request.user)
+#     return render(request, 'OnlineShoppingApp/mycart.html', {'mycart_items': mycart_items})
 
-            order_qs=AddToCart.objects.filter(product_id=product.product_id,user=request.user)
-            order = order_qs[0]
-            order.quantity += 1
-            order.save()
-    context = "true"
-    return render(request, 'OnlineShoppingApp/mycart.html', {'mycart_items': mycart_items,'context':context})
-
-def removeItem(request,cart_id):
-    product = get_object_or_404(AddToCart, id=cart_id).delete()
-    mycart_items = AddToCart.objects.filter(user=request.user)
-    return render(request, 'OnlineShoppingApp/mycart.html', {'mycart_items': mycart_items})
-
-def search(request):
-    try:
-        search = request.GET.get('search')
-    except:
-        search=None
-    if search:
-        products = Product.objects.filter(product_name__icontains=search)
-        print(products)
-        context = {'query': search, 'products': products}
-        template = 'OnlineShoppingApp/search.html'
-    else:
-        context = {}
-        template = 'OnlineShoppingApp/index.html'
-    return render(request, template, context)
+# def search(request):
+#     try:
+#         search = request.GET.get('search')
+#     except:
+#         search=None
+#     if search:
+#         products = Product.objects.filter(product_name__icontains=search)
+#         print(products)
+#         context = {'query': search, 'products': products}
+#         template = 'OnlineShoppingApp/search.html'
+#     else:
+#         context = {}
+#         template = 'OnlineShoppingApp/index.html'
+#     return render(request, template, context)

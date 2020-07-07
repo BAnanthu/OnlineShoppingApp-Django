@@ -41,8 +41,7 @@ INSTALLED_APPS = [
     'Accounts',
     'Products',
     'Search',
-    'Addtocart',
-    'Mycart',
+    'Cart',
     'django_filters',
 
 ]
