@@ -1,0 +1,69 @@
+$headingfontsize : 35px;
+$optionfontsize :17px;
+
+.payment-method-body{
+    height: 100%;
+    width: 100%;
+    margin-top: 0px;
+    // background-color: rgb(246, 246, 246);
+    background-image: url(./images/payment-bg.png);
+}
+
+.select-method-container{
+    margin:0px 290px;
+    padding-bottom: 100px;
+    h2{
+        margin-bottom:40px ;
+        padding-top: 40px;
+        font-size: $headingfontsize ;
+    }
+    .select-method{
+        background-color:white;
+        border: solid 1px rgb(221, 220, 220);
+        height: 70px;
+        display: grid;
+        align-items: center;
+        border-radius: 5px;
+        margin: 10px;
+        opacity: .9;
+        .method-option{
+            margin-left: 80px;
+            .radio{
+                width: 20px;
+                height: 20px;
+                margin-top: 10px;
+                margin-right: 50px;
+            }
+            .option-name{
+                font-size: $optionfontsize ;
+                font-weight: bolder;
+                margin-top: 6px;
+                position: absolute;
+
+            }
+        }
+
+    }
+}
+.button-container{
+    display: grid;
+    justify-content: center;
+    padding: 20px;
+    .continue-button{
+        height: 40px;
+        width: 300px;
+        background-image: linear-gradient(to right,rgb(149, 94, 238),rgb(68, 4, 141),rgb(149, 94, 238));
+        border: none;
+        border-radius: 4px;
+        font-weight: bold;
+        color: white;
+        font-family: random($limit: 1);
+        background-image: url(./images/payment-bg.png);
+        &:hover{
+            transition: 1s;
+            background-image: linear-gradient(to right,rgb(68, 4, 141),rgb(149, 94, 238),rgb(68, 4, 141));
+        }
+    }
+
+}
+

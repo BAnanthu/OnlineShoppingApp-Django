@@ -1,0 +1,79 @@
+.payment-method-body {
+  height: 100%;
+  width: 100%;
+  margin-top: 0px;
+  background-image: url("/static/images/signup-bg.png");
+}
+
+.select-method-container {
+  margin: 0px 290px;
+  padding-bottom: 100px;
+}
+
+.select-method-container h2 {
+  margin-bottom: 40px;
+  padding-top: 40px;
+  font-size: 35px;
+}
+
+.select-method-container .select-method {
+  background-color: white;
+  border: solid 1px #dddcdc;
+  height: 70px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  margin: 10px;
+  opacity: .9;
+}
+
+.select-method-container .select-method .method-option {
+  margin-left: 80px;
+}
+
+.select-method-container .select-method .method-option .radio {
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
+  margin-right: 50px;
+}
+
+.select-method-container .select-method .method-option .option-name {
+  font-size: 17px;
+  font-weight: bolder;
+  margin-top: 6px;
+  position: absolute;
+}
+
+.button-container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+}
+
+.button-container .continue-button {
+  height: 40px;
+  width: 300px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#955eee), color-stop(#44048d), to(#955eee));
+  background-image: linear-gradient(to right, #955eee, #44048d, #955eee);
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  color: white;
+  font-family: 1;
+  background-image: url(./images/payment-bg.png);
+}
+
+.button-container .continue-button:hover {
+  -webkit-transition: 1s;
+  transition: 1s;
+  background-image: -webkit-gradient(linear, left top, right top, from(#44048d), color-stop(#955eee), to(#44048d));
+  background-image: linear-gradient(to right, #44048d, #955eee, #44048d);
+}
+/*# sourceMappingURL=payment-method.css.map */

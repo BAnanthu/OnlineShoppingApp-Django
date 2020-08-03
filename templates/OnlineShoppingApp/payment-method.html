@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/payment-method.css' %}">
+</head>
+<body>
+ <form method="post" action="/Orders/Order/{{product_id}}/">
+     {% csrf_token %}
+    <div class="payment-method-body">
+        <div class="select-method-container">
+            <h2 style="color: white;">Select a payment method</h2>
+
+            <div class="select-method">
+                <div class="method-option">
+                    <input class="radio" type="radio" name="payment" value="upi"><label class="option-name" >U P I</label>
+                </div>
+            </div>
+            <div class="select-method">
+                <div class="method-option">
+                    <input class="radio" type="radio" name="payment" value="card"><label class="option-name" >Add Debit/Credit/ATM Card</label>
+                </div>
+            </div>
+            <div class="select-method">
+                <div class="method-option">
+                    <input class="radio" type="radio" name="payment" value="netbanking"><label class="option-name" >Net Banking</label>
+                </div>
+            </div>
+            <div class="select-method">
+                <div class="method-option">
+                    <input class="radio" type="radio" name="payment" value="emi"><label class="option-name" >E M I</label>
+                </div>
+            </div>
+            <div class="select-method">
+                <div class="method-option">
+                    <input class="radio" type="radio" name="payment" value="cod"><label class="option-name" >Pay on Delivery (Cash/UPI?Card)</label>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="button-container">
+        <button type="submit"  class="continue-button" >Continue</button>
+    </div>
+    </form>
+    
+</body>
+</html>
