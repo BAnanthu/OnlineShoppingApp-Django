@@ -51,7 +51,7 @@
                 
             </div>
             <button onclick="location.href='/Cart/removeItem/{{ Data.id }}'" class="mycart-delete-btn"><i class="fas fa-trash-alt"></i> Delete</button>
-            <button class="mycart-buy-btn"><i class="fas fa-shopping-cart"></i> Buy Now</button>
+            <button onclick="location.href='/Payment/PaymentMethods/{{ Data.product_id }}'" class="mycart-buy-btn" ><i class="fas fa-shopping-cart"></i> Buy Now</button>
         </div>
 
         {% endfor %}

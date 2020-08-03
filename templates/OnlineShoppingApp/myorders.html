@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mycart.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <script src="//use.fontawesome.com/releases/v5.12.1/js/all.js" data-auto-replace-svg="nest"></script>
+</head>
+<body>
+<!--    {% if context %}-->
+<!--    {% block content %}-->
+<!--        {% include 'OnlineShoppingApp/productAdded.html' %}-->
+<!--    {% endblock %}-->
+<!--    {% endif %}-->
+<!--    <div class="mycart-total">-->
+<!--        <h2 class="mycart-subtotal">Subtotal(6): <span class="total-amount">$110,855.00</span></h2>-->
+<!--        <p><i class="fas fa-check"></i> Your order qualifies for FREE Delivery </p>-->
+<!--        <button class="mycart-buy-btn"><i class="fas fa-shopping-cart"></i>Proceed to Buy</button>-->
+<!--    </div>-->
+
+    <div class="mycart-container">
+
+
+        {% for Data in myorder_items %}
+
+        <div class="mycrt-item-wrap">
+            <div class="mycart-product-img-wrap">
+                <a href="./productdetails/{{ Data.product_id }}"><img src="{{ Data.product.product_image.url }}" alt=""></a>
+            </div>
+            <div class="mycart-product-details">
+                <h6  class="mycart-product-name">{{ Data.product.product_name }}</h6>
+                <h6 class="mycart-product-price">$ {{ Data.product.product_dealprice }}</h6>
+                <span class="mycart-product-stock">In Stock</span><br>
+                <span class="mycart-product-qty">Quantity : {{ Data.order_quantity }}</span><br>
+                <span class="mycart-product-qty">Deliver To : <i class="fas fa-map-marker-alt"></i> {{ Data.user.customer.customer_address }}</span>
+
+
+            </div>
+            <button onclick="location.href='/Orders/removeOrderItem/{{ Data.order_id}}'" class="mycart-delete-btn">Cancel Order</button>
+<!--            <button onclick="location.href='/Payment/PaymentMethods/{{ Data.product_id }}'" class="mycart-buy-btn" ><i class="fas fa-shopping-cart"></i> Buy Now</button>-->
+        </div>
+
+        {% endfor %}
+    </div>
+</body>
+</html>

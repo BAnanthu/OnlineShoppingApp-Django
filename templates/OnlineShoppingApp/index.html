@@ -126,7 +126,7 @@
     <a href=""><i class="fas fa-laptop"></i> Computer</a>
     <a href=""><i class="fas fa-box-open"></i> Offer Zone</a>
     <a href="/Cart/myCart"><i class="fas fa-cart-arrow-down"></i> My Cart</a>
-    <a href=""><i class="fas fa-shopping-cart"></i> My Orders</a>
+    <a href="/Orders/myOrders"><i class="fas fa-shopping-cart"></i> My Orders</a>
     <a href=""><i class="fas fa-user"></i> My Account</a>
     <a href=""><i class="fas fa-heart"></i> My Wishlist</a>
     <a href="">Help Center</a>
@@ -266,62 +266,62 @@
 
   <div class="outer-bg-card-cotainer-2">
     <div class="heading-container">
-      <h4 class="card-heading">TODAY'S DEALS</h4>
+      <h4 class="card-heading">OFFERS'S ZONE</h4>
       <p class="card-sub-heading">On Mobile & Headphone</p>
     </div>
     <div class="row" style="margin: 0px;">
 
 
       <div class="card-4-container ">
-        {% for TDData in TodaysDealsdata %}
+        {% for OFData in OfferZoneData %}
         {% if forloop.counter <= 4 and forloop.counter > 0  %}
           <div class="card2">
-            <div class="card-img-container"><a href="/Products/productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"><img src="{{ TDData.todaysDeal_product_fk.product_image.url }}"></a><a  class="card2-product-name">{{ TDData.todaysDeal_product_fk.product_name }}</a><br><a
-              class="card2-product-price">just ${{ TDData.todaysDeal_deal_price }}</a></div>
+            <div class="card-img-container"><a href="/Products/productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"><img src="{{ OFData.offerzone_product_fk.product_image.url }}"></a><a  class="card2-product-name">{{ OFData.offerzone_product_fk.product_name }}</a><br><a
+              class="card2-product-price">just ${{ OFData.todaysDeal_deal_price }}</a></div>
           </div>
         {% endif %}
         {% endfor %}
       </div>
 
        <div class="card-4-container ">
-        {% for TDData in TodaysDealsdata %}
+        {% for OFData in OfferZoneData %}
         {% if forloop.counter  <= 8 and forloop.counter > 4  %}
           <div class="card2">
-          <div class="card-img-container"><a href="/Products/productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"><img src="{{ TDData.todaysDeal_product_fk.product_image.url }}"></a><a class="card2-product-name">{{ TDData.todaysDeal_product_fk.product_name }}</a><br><a
-              class="card2-product-price">just ${{ TDData.todaysDeal_deal_price }}</a></div>
+          <div class="card-img-container"><a href="/Products/productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"><img src="{{ OFData.offerzone_product_fk.product_image.url }}"></a><a class="card2-product-name">{{ OFData.offerzone_product_fk.product_name }}</a><br><a
+              class="card2-product-price">just ${{ OFData.offerzone_deal_price }}</a></div>
           </div>
         {% endif %}
         {% endfor %}
       </div>
 
        <div class="card-4-container ">
-        {% for TDData in TodaysDealsdata %}
+        {% for OFData in OfferZoneData %}
         {% if forloop.counter <= 12 and forloop.counter > 8  %}
           <div class="card2">
-          <div class="card-img-container"><a href="/Products/productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"></a><img src="{{ TDData.todaysDeal_product_fk.product_image.url }}"></a><a class="card2-product-name">{{ TDData.todaysDeal_product_fk.product_name }}</a><br><a
-              class="card2-product-price">just ${{ TDData.todaysDeal_deal_price }}</a></div>
+          <div class="card-img-container"><a href="/Products/productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"></a><img src="{{ OFData.offerzone_product_fk.product_image.url }}"></a><a class="card2-product-name">{{ OFData.offerzone_product_fk.product_name }}</a><br><a
+              class="card2-product-price">just ${{ OFData.offerzone_deal_price }}</a></div>
           </div>
         {% endif %}
         {% endfor %}
       </div>
 
        <div class="card-4-container ">
-        {% for TDData in TodaysDealsdata %}
+        {% for OFData in OfferZoneData %}
         {% if forloop.counter <= 16 and forloop.counter > 12  %}
           <div class="card2">
-          <div class="card-img-container"><a href="/Products/productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"></a><img src="{{ TDData.todaysDeal_product_fk.product_image.url }}"></a><a class="card2-product-name">{{ TDData.todaysDeal_product_fk.product_name }}</a><br><a
-              class="card2-product-price">just ${{ TDData.todaysDeal_deal_price }}</a></div>
+          <div class="card-img-container"><a href="/Products/productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"></a><img src="{{ OFData.offerzone_product_fk.product_image.url }}"></a><a class="card2-product-name">{{ OFData.offerzone_product_fk.product_name }}</a><br><a
+              class="card2-product-price">just ${{ OFData.offerzone_deal_price }}</a></div>
           </div>
         {% endif %}
         {% endfor %}
       </div>
 
        <div class="card-4-container ">
-        {% for TDData in TodaysDealsdata %}
+        {% for OFData in OfferZoneData %}
         {% if forloop.counter <= 20 and forloop.counter > 16  %}
           <div class="card2">
-          <div class="card-img-container"><a href="/Products/productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"></a><img src="{{ TDData.todaysDeal_product_fk.product_image.url }}"></a><a class="card2-product-name">{{ TDData.todaysDeal_product_fk.product_name }}</a><br><a
-              class="card2-product-price">just ${{ TDData.todaysDeal_deal_price }}</a></div>
+          <div class="card-img-container"><a href="/Products/productdetails/{{ TDData.todaysDeal_product_fk.product_id }}"></a><img src="{{ OFData.offerzone_product_fk.product_image.url }}"></a><a class="card2-product-name">{{ OFData.offerzone_product_fk.product_name }}</a><br><a
+              class="card2-product-price">just ${{ OFData.offerzone_deal_price }}</a></div>
           </div>
         {% endif %}
         {% endfor %}

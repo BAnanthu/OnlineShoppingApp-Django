@@ -1,7 +1,7 @@
 from django.shortcuts import render,get_object_or_404
 from django.http import HttpResponse
 from Products.models import Product
-from Products.models import TodaysDeals,NewItems
+from Products.models import TodaysDeals,NewItems,OfferZone
 from Cart.models import AddToCart
 # from .forms import UserSignupForm
 from django.contrib.auth.models import User, auth
@@ -11,7 +11,8 @@ def home(request):
     data = Product.objects.all()
     TodaysDealsdata = TodaysDeals.objects.all()
     NewItemsdata = NewItems.objects.all()
-    return render(request, 'OnlineShoppingApp/index.html', {"data": data, "TodaysDealsdata": TodaysDealsdata, "NewItemsdata":NewItemsdata})
+    OfferZoneData = OfferZone.objects.all()
+    return render(request, 'OnlineShoppingApp/index.html', {"data": data, "TodaysDealsdata": TodaysDealsdata, "NewItemsdata":NewItemsdata ,"OfferZoneData":OfferZoneData})
 
 # def register(request):
 #     if request.method == "POST":
